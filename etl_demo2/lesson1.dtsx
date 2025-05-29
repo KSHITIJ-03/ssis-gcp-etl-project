@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="lesson1"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{E75C1A6E-3AD0-4026-81BE-E7C1F01A3075}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{2C0C99E8-A575-4754-A5CB-3DA8D5A13A36}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,6 +21,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{782F5311-245C-4064-8E89-C4F42014D6A5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1273,7 +1274,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1415,14 +1416,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{720E5B04-7AE5-4B13-8D95-D36CA9DE0822}"
-      DTS:From="Package\Extract Sample Currency Data"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Data Flow Task" />
-    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{8A07F4C8-BA3D-4FBE-9D6A-C6DA12C055B3}"
@@ -1442,7 +1435,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="224,42.6666666666667"
           Id="Package\Extract Sample Currency Data"
@@ -1455,40 +1448,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
           Size="153.333333333334,42.6666666666667"
           Id="Package\Data Flow Task"
           TopLeft="59.3749973457307,153.947366730741" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="219.124993601814,115.877192178619">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-83.0833295894166,38.0701745521219"
-              Start="0,0"
-              End="-83.0833295894166,30.5701745521219">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.3900705636237" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.3900705636237"
-                    Point2="0,15.3900705636237"
-                    Point3="-4,15.3900705636237" />
-                  <mssgle:LineSegment
-                    End="-79.0833295894166,15.3900705636237" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-79.0833295894166,15.3900705636237"
-                    Point2="-83.0833295894166,15.3900705636237"
-                    Point3="-83.0833295894166,19.3900705636237" />
-                  <mssgle:LineSegment
-                    End="-83.0833295894166,30.5701745521219" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="259.124993601814,247.684207806792">
